@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .con1 .nav:nth-child(2n) a{
+            color: white;
+        }
+        
+        .con1 .nav:nth-child(2n-1) a{
+            color: rgb(214, 208, 208);
+        }
+        .con1 .nav:nth-child(n) a:hover{
+            color: rgb(214, 190, 52);
+        }
+        .con1{
+            display: flex;
+            justify-content: center;
+            background-color: black;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .con1 ul:nth-child(2){
+            width: 350px;
+            font-size: 20px;
+        }
+        .con1 ul:nth-child(3){
+            width: 320px;
+            font-size: 13px;
+        }
+        .con1 ul:nth-child(3) li{
+            display: flex;
+        }
+        .con1 ul:nth-child(4){
+            width: 100px;
+            font-size: 13px;
+        }
+        .serch{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 200px;
+            position: relative;
+            margin-left: 20px;
+        }
+        li>div{
+            height: 17px;
+            width: 15px;
+            background-image: url(./images/7.png);
+            background-position: 73% 12%;
+        }
+        .serch>a{
+            color: white;
+            font-size: 25px;
+            margin-top: 14px;
+        }
+        .serch>input{
+            position: absolute;
+            background-color: rgba(40,40,40,0.1);
+            color: #868484;
+            border-radius: 10px;
+            width: 140px;
+            height: 20px;
+            border-style: none;
+            padding-left: 15px;
+        }
+        
+
+
+        .con2{
+            display: flex;
+            justify-content: center;
+        }
+        .left{
+            width: 500px;
+        }
+        .left h1{
+            text-align: center;
+        }
+        .left>div{
+            display: flex;
+            line-height: 0px;
+            align-items: center;
+            justify-content: center;
+        }
+        .left div:nth-child(4){
+            flex-direction: column;
+            line-height: 0px;
+            color: dimgray;
+            width: 500px;
+            height: 400px;
+            overflow: auto;
+            margin-top: 30px;
+            border-top: 1px solid grey;
+            padding-top: 100px;
+        }
+        .left span{
+            color: dimgray;
+        }
+        .left a{
+            color: rgb(214, 190, 52);
+        }
+        
+
+
+        .right{
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+        }
+        .img1 img{
+            width: 110%;
+            border-radius: 50%;
+            animation: animation1 10s infinite linear;
+            padding: 5px;
+            border: 1px solid grey;
+        }
+        @keyframes animation1{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .img1 div{
+            width: 30px;
+            height: 30px;
+            content: "";
+            display: block;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.4);
+            position: absolute;
+            margin-top: -130px;
+            margin-left: 98px;
+            border: 1px solid grey;
+        }
+        .img1::after{
+            width: 10px;
+            height: 10px;
+            content: "";
+            display: block;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            margin-top: -120px;
+            margin-left: 108px;
+            border: 1px solid grey;
+        }
+        .audio{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .parse{
+            height: 40px;
+            width: 40px;
+            background-image: url(./images/9.jpg);
+            background-position: -110px 0;
+        }
+        .bar div{
+            width: 0px;
+            height: 6px;
+            border-radius: 6px;
+            background-color: rgb(214, 190, 52);
+            content: "";
+            position: absolute;
+            margin-top: -2px;
+            
+        }
+        .bar{
+            width: 300px;
+            height: 3px;
+            background-color: lightgray;
+            align-self: center;
+            margin-left: 15px;
+            position: relative;
+        }
+
+        .time{
+            width: 50px;
+            height: 30px;
+            margin-left: 15px;
+            align-self: center;
+            margin-top: 8px;
+            color: gray;
+        }
+        .volumn{
+            background-image: url(./images/9.jpg);
+            width: 25px;
+            height: 18px;
+            background-position: -40px 0;
+            align-self: center;
+        }
+        .download{
+            display: flex;
+            justify-content: center;
+            background-color: #5e53a1;
+            width: 200px;
+            border-radius: 30px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .download div:nth-child(1){
+            background-image: url(./images/9.jpg);
+            width: 18px;
+            height: 18px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .comment{
+            margin-top: 200px;
+            margin-left: 300px;
+        }
+        .discuss{
+            width: 350px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .discuss img{
+            width: 15%;
+            border-radius: 50%;
+        }
+        .discuss>div{
+            width: 250px;
+            height: 60px;
+            background-color: lightgray;
+            border-radius: 10px;
+            margin-left: 25px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .dis1::after{
+            width: 38px;
+            height: 38px;
+            transform: rotateZ(-45deg) skew(15deg,15deg);
+            background-color: lightgray;
+            content: "";
+            display: block;
+            margin-top: -55px;
+            z-index: 1;
+        }
+        .dis1>p{
+            color:grey;
+            font-size: 5px;
+            z-index: 2;
+            margin-left: 10px;
+        }
+        .dis1>div{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 2;
+            margin-top: 10px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .dis1 div p{
+            margin-top: 0px;
+        }
+
+        .top1{
+            display: flex;
+            width: 200px;
+            align-items: center;
+        }
+        #sum{
+            margin-left: 30px;
+            font-size: 10px;
+        }
+        .top2{
+            display: flex;
+            flex-direction: column;
+            width: 650px;
+            border-top: 1px solid grey;
+            padding-top:30px
+        }
+        .com1{
+            display: flex;
+        }
+        .com1 img{
+            width: 8%;
+            align-self: flex-start;
+        }
+        .com2{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .com2 img{
+            width: 4%;
+            margin-left: 50px;
+        }
+        .com2 button{
+            width: 70px;
+            height: 30px;
+            background-color: rgb(214, 190, 52);
+            border: none;
+            color: white;
+        }
+        .com2>div{
+            display: flex;
+            width: 160px;
+            justify-content: space-between;
+        }
+        #text{
+            color: grey;
+            align-self: center;
+            font-size: 10px;
+        }
+        .bot1{
+            width: 650px;
+            border-top: 1px solid grey;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        .bot1>div{
+            display: flex;
+            align-items: center;
+        }
+        .image{
+            width: 8%;
+        }
+        .all{
+            display: flex;
+            align-items: center;
+        }
+        .good{
+            margin-left: 10px;
+        }
+        .good2{
+            width: 7%;
+            margin-left: 5px;
+        }
+        .res{
+            margin-left: 10px;
+        }
+        .comm div:nth-child(2){
+            margin-left: 20px;
+            width: 400px;
+        }
+        .comm div:nth-child(3){
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .name1{
+            color: rgb(214, 190, 52);
+        }
+        .page{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 650px;
+        }
+        .page>li{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 4px;
+        }
+        .comm{
+            width: 650px;
+            height: 140px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="con1">
+        <img src="./images/4.jpg" alt="">
+        <ul class="nav">
+            <li><a href="">首页</a></li>
+            <li><a href="">榜单</a></li>
+            <li><a href="">歌手</a></li>
+            <li><a href="">下载酷我客户端</a></li>
+        </ul>
+        <ul class="nav">
+            <li>
+                <div></div>
+                <a href="">美女秀</a>
+            </li>
+            <li>
+                <div></div>           
+                <a href="">酷我耳机</a>
+            </li>
+            <li>
+                <div></div>              
+                <a href="">VIP会员</a>
+            </li>
+            <li>
+                <div></div>              
+                <a href="">i听</a>
+            </li>
+        </ul>
+        <ul class="nav">
+            <li><a href="">更多服务</a></li>
+            <li><a href="">登录</a></li>
+        </ul>
+        <div class="serch">
+            <a href="">^</a>
+            <img src="./images/6.png" alt="">
+            <input type="text" value="找到好音乐">
+            
+        </div>
+    </div>
+    <div class="con2">
+        <div class="left">
+            <h1>喜羊羊</h1>
+            <div>
+                <p><span>专辑：</span><a href="">儿童大全</a></p>
+                <p><span>歌手：</span><a href="">华语群星</a></p>
+                <span>分享</span>
+                <img src="./images/2.jpg" alt="">
+                <a href="">评论</a>
+            </div>
+            <div>
+                <p>上传时间：2015-10-02  歌曲来源：网络</p>
+            </div>
+            <!-- <hr /> -->
+            <div class="text">
+                <p>喜羊羊美羊羊懒羊羊沸羊羊</p>
+                <p>慢羊羊软绵绵红太狼灰太狼</p>
+                <p>别看我只是一只羊</p>
+                <p>绿草因为我变的更香</p>
+                <p>天空因为我变的更蓝</p>
+                <p>白云因为我变的柔软</p>
+                <p>别看我只是一只羊</p>
+                <p>羊儿的聪明难以想像</p>
+                <p>天再高心情一样奔放</p>
+                <p>每天都追赶太阳</p>
+                <p>有什么难题去牵绊我都不会去心伤</p>
+                <p>有什么危险在我面前也不会去慌乱</p>
+                <p>就算有狼群把我追捕也当做游戏一场</p>
+                <p>在什么时间都爱开心笑容都会飞翔</p>
+                <p>就算会摔倒站得起来永远不会沮丧</p>
+                <p>在所有天气拥有叫人大笑的力量</p>
+                <p>虽然我只是羊</p>
+                <p>喜羊羊美羊羊</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="img1">
+                <img src="./images/1.jpg" alt="">
+                <div></div>
+            </div>
+            
+            <div class="audio">
+                <audio loop="true" id="myaudio">   
+                    <source src="./ReadingAudio/aba3d4d94671d59b.mp3"></source>
+                    <source src="./ReadingAudio/aba3d4d94671d59b.mp3"></source>
+                    您的浏览器不支持音频播放   
+                </audio>
+                <div class="parse"></div>
+                <div class="bar">
+                    <div class="bar1"></div>
+                </div>
+                <div class="time">00:00</div>
+                <div class="volumn"></div>
+            </div>
+            <div class="download">
+                <div></div>
+                <div>免费下载这首歌</div>
+            </div>
+            <div class="discuss">
+                <img src="./images/10.webp" alt="">
+                <div class="dis1">
+                    <p>郭子仪——h5班</p>
+                    <div>
+                        <p>喜羊羊与灰太狼</p>
+                        <a href="">去现场></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comment">
+        <div class="top">
+            <div class="top1">
+                <p>评论</p>
+                <p id="sum"></p>
+            </div>
+            <div class="top2"> 
+                <div class="com1">
+                    <img src="./images/10.webp" alt="" id="img11">
+                    <textarea name="text" id="textarea1" cols="80" rows="8"></textarea>
+                </div>
+                <div class="com2">
+                    <img src="./images/14 (3).png" alt="">
+                    <div>
+                        <div id="text">已输入0个字符</div>
+                        <button id="btn">评论</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>精彩评论</p>
+            <div class="bot1">
+                <div class="comm">
+                    <img src="" alt="" class="image">
+                    <div>
+                        <p class="name1"></p>
+                        <p class="content2"></p>
+                        <p class="time2"></p>
+                    </div>
+                    <div>
+                        <a href="" class="share"></a>
+                        <div class="all">
+                            <p class="delete1"></p>
+                            <p class="good"></p>
+                            <img src="" alt="" class="good2">
+                            <p class="res"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="comm">
+                    <img src="" alt="" class="image">
+                    <div>
+                        <p class="name1"></p>
+                        <p class="content2"></p>
+                        <p class="time2"></p>
+                    </div>
+                    <div>
+                        <a href="" class="share"></a>
+                        <div class="all">
+                            <p class="delete1"></p>
+                            <p class="good"></p>
+                            <img src="" alt="" class="good2">
+                            <p class="res"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="comm">
+                    <img src="" alt="" class="image">
+                    <div>
+                        <p class="name1"></p>
+                        <p class="content2"></p>
+                        <p class="time2"></p>
+                    </div>
+                    <div>
+                        <a href="" class="share"></a>
+                        <div class="all">
+                            <p class="delete1"></p>
+                            <p class="good"></p>
+                            <img src="" alt="" class="good2">
+                            <p class="res"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="page">
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var audio = document.getElementsByTagName("audio")[0];
+    var pause = document.getElementsByClassName("parse")[0];
+    var volumn = document.getElementsByClassName("volumn")[0];
+    var time = document.getElementsByClassName("time")[0];
+    var bar1 = document.getElementsByClassName("bar1")[0];
+    var textarea1 = document.getElementById("textarea1");
+    var text = document.getElementById("text");
+    var btn = document.getElementById("btn");
+    var img11 = document.getElementById("img11");
+    var bot1 = document.getElementsByClassName("bat1")[0];
+    var image = document.getElementsByClassName("image");
+    var name1 = document.getElementsByClassName("name1");
+    var content2 = document.getElementsByClassName("content2");
+    var time2 = document.getElementsByClassName("time2");
+    var share = document.getElementsByClassName("share");
+    var delete1 = document.getElementsByClassName("delete1");
+    var good = document.getElementsByClassName("good");
+    var good2 = document.getElementsByClassName("good2");
+    var res = document.getElementsByClassName("res");
+    var page = document.getElementsByClassName("page")[0];
+    var sum = document.getElementById("sum");
+
+    var index1 = false; 
+    var index2 = false; 
+    var index4 = 1;
+    var currentTime;
+    var duration;
+    var str;
+    window.onload = function(){
+        duration = audio.duration;
+        getNote(1);
+        // save();
+    }
+    function save(){
+        var noteObj = {
+                    img2:"./images/17.webp",name:"gui",content:"好好听~~~",time:1623055456446,zan:120,img4:"./images/15.png",index3:false
+                }
+        
+        localStorage['notelist1'] = JSON.stringify(noteObj);
+        // var noteList1 = sessionStorage["noteList1"];
+        
+	    // noteList1 = JSON.parse(sessionStorage["noteList1"]);
+        // for(var i = 0;i<noteList.length;i++){
+        //     if(noteList[i][name] != "gui"&& noteList[i][name] != "咩咩~"){
+            
+                
+                // var noteObj2 = {
+                //     img2:"./images/18.webp",name:"咩咩~",content:"好好听~~~",time:1623056000000,zan:120,img4:"./images/15.png",index3:false
+                // }
+                // noteList1.push(noteObj);
+                // // noteList.push(noteObj2);
+                // noteList1 = JSON.stringify(noteList1);
+                // sessionStorage["noteList1"] = noteList1; 
+            // }
+        // }
+        
+        
+    }
+    
+    pause.onclick = function(){
+        if(index1 == false){
+            audio.play();
+            index1 = true;
+            this.style = "background-position: -207px 0;";
+            setInterval(function () {
+                currentTime = parseInt(audio.currentTime);
+                bar1.style.width = 300 * currentTime / duration + "px";
+                time.innerHTML = form(currentTime);
+            }, 1000)
+        }else{
+            audio.pause();
+            index1 = false;
+            this.style = "background-position: -110px 0;";
+        }
+    }
+    volumn.onclick = function(){
+        if(audio.muted == false){
+            audio.muted = true;
+            index2 = false;
+        }else{
+            audio.muted = false;
+            index2 = true;
+        }
+    }
+    
+    function form(cur) {
+        if (cur < 10) {
+          cur = "00:0" + cur;
+        }
+        else if (cur < 60) {
+          cur = "00:" + cur;
+        }
+        else if (cur < 600) {
+          if (cur % 60 < 10) {
+            cur = "0" + parseInt(cur / 60) + ":" + "0" + cur % 60;
+          }
+          else {
+            cur = "0" + parseInt(cur / 60) + ":" + cur % 60;
+          }
+        }
+        else {
+          if (cur % 60 < 10) {
+            cur = parseInt(cur / 60) + ":" + "0" + cur % 60;
+          }
+          else {
+            cur = parseInt(cur / 60) + ":" + cur % 60;
+          }
+
+        }
+        return cur;
+    }
+    function format(date3){
+        var year = date3.getFullYear();
+		var month = date3.getMonth()+1;
+		var date5 = date3.getDate();
+		var hour = date3.getHours();
+		var minute = date3.getMinutes();
+		var second = date3.getSeconds();
+        month = month<10?"0"+month:month;
+        date5 = date5<10?"0"+date5:date5;
+        hour = hour<10?"0"+hour:hour;
+        minute = minute<10?"0"+minute:minute;
+        second = second<10?"0"+second:second;
+        var timer = year+"-"+month+"-"+date5+"  "+hour+":"+minute+":"+second;
+        return timer;
+    }
+    textarea1.onkeyup = function(){
+        str = textarea1.value;
+        text.innerHTML = "已输入  "+str.length +"字符";
+    }
+
+
+    btn.onclick = function(){
+        var img11URL = img11.getAttribute('src');
+        var content = textarea1.value;
+        textarea1.value = "";
+        text.innerHTML = "已输入  "+0 +"字符";
+        if(content == ""){
+            alert("文本框不能为空");
+        }else{
+            saveNote(content,img11URL,0);
+            index4 = 1;
+            getNote(1);
+        }
+    }
+    function saveNote(content,URL,zan){
+        URL = URL || "./images/5.jpg";
+
+        // var noteObj2 = {
+        //     img2:"./images/17.webp",name:"gui",content:"好好听~~~",time:1623055456446,zan:120,img4:"./images/15.png",index3:false
+        // }
+        // noteObj2 = JSON.stringify(noteObj2);
+
+        var noteList = localStorage["noteList"];
+        // var noteList2 = sessionStorage["noteList2"];
+		if(noteList == "" || noteList == null || noteList == undefined){
+			localStorage["noteList"] = "[]";
+            // localStorage["noteList"] = noteObj2;
+            // console.log(noteObj2);
+		}
+        
+        
+		noteList = JSON.parse(localStorage["noteList"]);
+
+        var date1 = new Date();
+        var dateTime = date1.getTime();
+        var noteObj = {img2:URL,name:"郭子仪",content:content,time:dateTime,zan:zan,img4:"./images/15.png",index3:false};
+        noteList.unshift(noteObj);
+        localStorage["noteList"] = JSON.stringify(noteList);
+    }
+    var index7 = 0;
+    function getNote(p){
+        for(var j = 0;j < 3;j++){
+            image[j].src = "";
+            name1[j].innerHTML = "";
+            content2[j].innerHTML = "";
+            time2[j].innerHTML = "";
+            share[j].innerHTML = "";
+            delete1[j].innerHTML = "";
+            good[j].innerHTML = "";
+            good2[j].src = "";
+            res[j].innerHTML = "";
+        }
+        page.innerHTML = "";
+		var noteList = localStorage["noteList"];
+		noteList = JSON.parse(noteList);
+        for(var i = 3*(p-1)+0;i < 3*(p-1)+3 && i < noteList.length;i++){
+            delete1[i-3*(p-1)].setAttribute("time",noteList[i]['time']);
+            good2[i-3*(p-1)].setAttribute("time",noteList[i]['time']);
+			
+            delete1[i-3*(p-1)].onclick = delNote;
+            good2[i-3*(p-1)].onclick = addZan;
+            var date3 = new Date(noteList[i].time);
+		    
+            var timer = format(date3);
+            
+            image[i-3*(p-1)].src = noteList[i].img2;
+            name1[i-3*(p-1)].innerHTML = noteList[i].name;
+            content2[i-3*(p-1)].innerHTML = noteList[i].content;
+            time2[i-3*(p-1)].innerHTML = timer;
+            share[i-3*(p-1)].innerHTML = "分享";
+            delete1[i-3*(p-1)].innerHTML = "删除";
+            good[i-3*(p-1)].innerHTML = noteList[i].zan;
+            good2[i-3*(p-1)].src = noteList[i].img4;
+            res[i-3*(p-1)].innerHTML = "回复";
+		}
+        sum.innerHTML = noteList.length+"条评论";
+
+        var last = document.createElement("li");
+        var next = document.createElement("li");
+        last.innerHTML = "<";
+        next.innerHTML = ">";
+        page.appendChild(last);
+        page.appendChild(next);
+
+        var num = parseInt((noteList.length-1)/3);
+        for(var i = 0;i < num+1 ; i++){
+            if(num+1<8){
+                var liList = document.createElement("li");
+                liList.setAttribute("id",i+1);
+                liList.innerHTML = i+1;
+                page.insertBefore(liList,next);
+            }else{
+                if(i==0 || i==1){
+                    var liList = document.createElement("li");
+                    liList.setAttribute("id",i+1);
+                    liList.innerHTML = i+1;
+                    page.insertBefore(liList,next);
+                    console.log(1);
+                    index7=0;
+                }else if(i<Number(index4)+2 && i>Number(index4)-4){
+                    var liList = document.createElement("li");
+                    liList.setAttribute("id",i+1);
+                    liList.innerHTML = i+1;
+                    page.insertBefore(liList,next);
+                    console.log(i,index4,2);
+                    index7 = 0;
+                }else if(i==num || i==num-1){
+                    var liList = document.createElement("li");
+                    liList.setAttribute("id",i+1);
+                    liList.innerHTML = i+1;
+                    page.insertBefore(liList,next);
+                    console.log(3);
+                    index7 = 0;
+                }else{
+                    if(index7 == 0){
+                       var liList = document.createElement("li");
+                        liList.innerHTML = "...";
+                        page.insertBefore(liList,next); 
+                    console.log(4);
+                        index7 = 1;
+                    }
+                    
+                }
+            }
+            
+            var liid = liList.getAttribute("id");
+            if(liid){
+                (function(liid){
+                    document.getElementById(liid).onclick = function(){
+                        index4 = liid;
+                        index7 = 0;
+                        getNote(liid);
+                    }
+                })(liid);  
+            }
+                     
+        }
+
+        document.getElementById(p).setAttribute("style","background-color:rgb(214, 190, 52)");
+        document.getElementById(p).style.color = "white";
+        last.onclick = function(){
+            if(index4 > 1){
+                index4 = index4-1;
+                index7 = 0;
+                getNote(index4);
+            }
+        }
+        next.onclick = function(){
+            if(index4 < num+1){
+                index4 = Number(index4) +1;
+                index7 = 0;
+                getNote(index4);
+            }
+        }
+    }
+
+    function delNote(){    
+        var time = this.getAttribute("time");
+		var noteList = localStorage["noteList"];
+		noteList = JSON.parse(noteList);
+		for(var i=0;i<noteList.length;i++){
+			if(time == noteList[i]["time"]){
+                var pag = parseInt(i/3)+1;
+				noteList.splice(i,1);
+			}
+		}
+		noteList = JSON.stringify(noteList);
+		localStorage["noteList"] = noteList;
+        getNote(pag);
+    }
+    function addZan(){
+        var time = this.getAttribute("time");
+        var noteList = localStorage["noteList"];
+        noteList = JSON.parse(noteList);
+		for(var i=0;i<noteList.length;i++){
+			if(time == noteList[i]["time"]){
+                var pag = parseInt(i/3)+1;
+                if(noteList[i].index3 == false){
+                    noteList[i].zan = noteList[i].zan+1;
+                    noteList[i].index3 = true;
+                    noteList[i].img4 = "./images/16.png";
+                }else{
+                    noteList[i].zan = noteList[i].zan-1;
+                    noteList[i].index3 = false; 
+                    noteList[i].img4 = "./images/15.png";
+                }
+			}
+		}
+        noteList = JSON.stringify(noteList);
+        localStorage["noteList"] = noteList;
+        getNote(pag);
+    }
+
+
+
+</script>
+</html>
